@@ -1,9 +1,9 @@
 var HTMLWebpackPlugin = require('html-webpack-plugin');
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin([
-  template: __dirname + 'app/index.html',
-  filename: 'index.html',
-  incject: 'body'
-]);
+var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+  template: __dirname + '/app/index.html',
+  filename: __dirname + '/bundle/index.html',
+  inject: 'body'
+});
 
 module.exports = {
   entry: __dirname + '/app/index.js',
